@@ -1,0 +1,13 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Miagkov;Oleg;;;
+FN:Oleg Miagkov
+TITLE:Tech Lead Data Engineer
+EMAIL;TYPE=INTERNET:mrobenner@gmail.com
+URL:https://www.oom.fyi
+item1.URL:https://www.linkedin.com/in/omiagkov
+item1.X-ABLabel:LinkedIn
+item2.URL:https://github.com/obenner
+item2.X-ABLabel:GitHub
+NOTE:High-load data platforms · fintech · Spark · Kafka · Scala · Python
+END:VCARD

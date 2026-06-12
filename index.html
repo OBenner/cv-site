@@ -17,6 +17,9 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Oleg Miagkov","jobTitle":"Tech Lead Data Engineer","url":"https://www.oom.fyi/","email":"mailto:mrobenner@gmail.com","sameAs":["https://www.linkedin.com/in/omiagkov","https://github.com/obenner"]}</script>
 <script data-goatcounter="https://oom.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23060a10'/><rect x='9' y='7' width='8' height='18' fill='%233dffa0'/></svg>">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<meta name="theme-color" content="#060a10">
 <style>
 :root{--bg:#060a10;--pn:#0a121b;--bd:#1b2c3b;--gr:#3dffa0;--cy:#45e1ff;--pk:#ff4fa3;--tx:#eaf6ff;--t2:#a8c0d3;--mu:#7d93a6;--mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,Consolas,monospace;--sans:-apple-system,"Segoe UI",Roboto,sans-serif}
 *{box-sizing:border-box}
@@ -38,6 +41,10 @@ body{margin:0;background:var(--bg);color:var(--t2);font-family:var(--mono);font-
 .err{color:var(--pk)}
 .pj{cursor:pointer}
 .pj:hover{text-decoration:underline}
+.qc:focus-visible,.pj:focus-visible{outline:2px solid #45e1ff;outline-offset:2px;border-radius:6px}
+.zone:focus{outline:none}
+.zone:focus-visible rect.z{stroke:rgba(69,225,255,.8)}
+@media (prefers-reduced-motion:reduce){.cur,.dot{animation:none}.mv{display:none}}
 .iw{position:relative;flex:1;display:flex;min-width:0}
 .iw input{width:100%}
 #gh{position:absolute;inset:0;display:flex;align-items:center;pointer-events:none;white-space:pre;overflow:hidden;font-size:14px}
@@ -46,6 +53,7 @@ body{margin:0;background:var(--bg);color:var(--t2);font-family:var(--mono);font-
 @keyframes slgo{to{left:-620px}}
 .row{display:flex;gap:10px;align-items:center;padding:10px 0 0}
 .row input{flex:1;background:none;border:none;outline:none;color:var(--cy);font-family:var(--mono);font-size:14px;caret-color:var(--gr);min-width:0}
+.cur{display:inline-block;width:8px;height:14px;background:var(--gr);vertical-align:-2px;animation:b 1.1s steps(2) infinite}
 .ice{margin:10px 0 2px;max-width:640px}
 .ice svg{width:100%;height:auto;display:block}
 .zone{cursor:pointer}
@@ -78,7 +86,7 @@ footer a{color:var(--cy);text-decoration:none}
 <div class="hd"><span style="color:var(--cy)">bash</span><span>—</span><span>oleg miagkov · lead data engineer · terminal site</span><span style="margin-left:auto;display:flex;align-items:center;gap:6px;color:var(--gr);font-size:12px"><span class="dot"></span>tty1</span></div>
 <div class="chips">
 <span class="dim" style="font-size:12.5px">try:</span>
-<span class="qc">help</span><span class="qc">whoami</span><span class="qc">about</span><span class="qc">cv</span><span class="qc">cat stack.txt</span><span class="qc">ls projects/</span><span class="qc">contact</span><span class="qc">sudo hire</span>
+<span class="qc" tabindex="0" role="button">help</span><span class="qc" tabindex="0" role="button">whoami</span><span class="qc" tabindex="0" role="button">about</span><span class="qc" tabindex="0" role="button">cv</span><span class="qc" tabindex="0" role="button">cat stack.txt</span><span class="qc" tabindex="0" role="button">ls projects/</span><span class="qc" tabindex="0" role="button">contact</span><span class="qc" tabindex="0" role="button">sudo hire</span>
 </div>
 <div class="hist" id="hist" aria-live="polite">
 <div class="ln"><span class="pr">omiagkov@prod:~$</span> <span class="in">whoami</span></div>
@@ -97,7 +105,7 @@ footer a{color:var(--cy);text-decoration:none}
 <svg viewBox="0 0 640 360" role="img" aria-label="the stack as an iceberg: BI and dashboards above the water, DWH, processing and foundation below — click a depth">
 <rect x="16" y="110" width="608" height="234" fill="rgba(69,225,255,.05)"></rect>
 <line x1="16" y1="110" x2="624" y2="110" stroke="rgba(69,225,255,.55)" stroke-width="1.5"></line>
-<text x="600" y="102" text-anchor="end" font-size="11" fill="#7d93a6" style="font-family:var(--mono)">sea level · what everyone sees</text>
+<text class="L1" x="600" y="102" text-anchor="end" font-size="11" fill="#7d93a6" style="font-family:var(--mono)">sea level · what everyone sees</text>
 <polygon points="300,38 250,110 360,110" fill="rgba(234,246,255,.09)" stroke="#eaf6ff" stroke-width="1.5"></polygon>
 <polyline points="300,38 292,110" fill="none" stroke="rgba(234,246,255,.35)"></polyline>
 <polygon points="250,110 360,110 415,150 430,230 390,320 280,330 220,250 200,170" fill="rgba(69,225,255,.06)" stroke="rgba(69,225,255,.5)" stroke-width="1.5"></polygon>
@@ -110,22 +118,22 @@ footer a{color:var(--cy);text-decoration:none}
 <text x="40" y="154" font-size="11" fill="#7d93a6" style="font-family:var(--mono)">−20 m</text>
 <text x="40" y="224" font-size="11" fill="#7d93a6" style="font-family:var(--mono)">−50 m</text>
 <text x="40" y="294" font-size="11" fill="#7d93a6" style="font-family:var(--mono)">−100 m</text>
-<text x="468" y="72" font-size="12" fill="#eaf6ff" font-weight="500" style="font-family:var(--mono)">BI · dashboards</text>
-<text x="468" y="88" font-size="11" fill="#7d93a6" style="font-family:var(--sans)">reports — the tip</text>
+<text class="L2" x="468" y="72" font-size="12" fill="#eaf6ff" font-weight="500" style="font-family:var(--mono)">BI · dashboards</text>
+<text class="L3" x="468" y="88" font-size="11" fill="#7d93a6" style="font-family:var(--sans)">reports — the tip</text>
 <text x="468" y="180" font-size="12" fill="#45e1ff" font-weight="500" style="font-family:var(--mono)">DWH</text>
-<text x="468" y="196" font-size="11" fill="#7d93a6" style="font-family:var(--sans)">Greenplum · data marts · SQL</text>
-<text x="468" y="248" font-size="12" fill="#45e1ff" font-weight="500" style="font-family:var(--mono)">processing</text>
+<text class="L5" x="468" y="196" font-size="11" fill="#7d93a6" style="font-family:var(--sans)">Greenplum · data marts · SQL</text>
+<text class="L6" x="468" y="248" font-size="12" fill="#45e1ff" font-weight="500" style="font-family:var(--mono)">processing</text>
 <text x="468" y="264" font-size="11" fill="#7d93a6" style="font-family:var(--sans)">Spark · Flink</text>
-<text x="468" y="312" font-size="12" fill="#45e1ff" font-weight="500" style="font-family:var(--mono)">foundation</text>
+<text class="L8" x="468" y="312" font-size="12" fill="#45e1ff" font-weight="500" style="font-family:var(--mono)">foundation</text>
 <text x="468" y="328" font-size="11" fill="#7d93a6" style="font-family:var(--sans)">Kafka · Hadoop · S3 · k8s</text>
-<circle r="2" fill="rgba(69,225,255,.5)"><animateMotion dur="5s" repeatCount="indefinite" path="M235,300 V125"></animateMotion></circle>
-<circle r="1.5" fill="rgba(69,225,255,.4)"><animateMotion dur="6.5s" repeatCount="indefinite" path="M405,280 V125"></animateMotion></circle>
-<circle r="2" fill="rgba(69,225,255,.45)"><animateMotion dur="4.2s" repeatCount="indefinite" path="M320,340 V125"></animateMotion></circle>
-<text font-size="12" fill="#ff4fa3" style="font-family:var(--mono)"><animateMotion dur="16s" repeatCount="indefinite" path="M60,265 H580"></animateMotion>&gt;&lt;&gt;</text>
-<g class="zone sel" data-k="bi"><rect class="z" x="185" y="30" width="270" height="76" rx="6"></rect></g>
-<g class="zone" data-k="dwh"><rect class="z" x="185" y="114" width="270" height="100" rx="6"></rect></g>
-<g class="zone" data-k="proc"><rect class="z" x="185" y="218" width="270" height="68" rx="6"></rect></g>
-<g class="zone" data-k="base"><rect class="z" x="185" y="290" width="270" height="52" rx="6"></rect></g>
+<circle class="mv" r="2" fill="rgba(69,225,255,.5)"><animateMotion dur="5s" repeatCount="indefinite" path="M235,300 V125"></animateMotion></circle>
+<circle class="mv" r="1.5" fill="rgba(69,225,255,.4)"><animateMotion dur="6.5s" repeatCount="indefinite" path="M405,280 V125"></animateMotion></circle>
+<circle class="mv" r="2" fill="rgba(69,225,255,.45)"><animateMotion dur="4.2s" repeatCount="indefinite" path="M320,340 V125"></animateMotion></circle>
+<text class="mv" font-size="12" fill="#ff4fa3" style="font-family:var(--mono)"><animateMotion dur="16s" repeatCount="indefinite" path="M60,265 H580"></animateMotion>&gt;&lt;&gt;</text>
+<g class="zone sel" data-k="bi" tabindex="0" role="button" aria-label="surface: BI and dashboards"><rect class="z" x="185" y="30" width="270" height="76" rx="6"></rect></g>
+<g class="zone" data-k="dwh" tabindex="0" role="button" aria-label="minus 20 meters: DWH"><rect class="z" x="185" y="114" width="270" height="100" rx="6"></rect></g>
+<g class="zone" data-k="proc" tabindex="0" role="button" aria-label="minus 50 meters: processing"><rect class="z" x="185" y="218" width="270" height="68" rx="6"></rect></g>
+<g class="zone" data-k="base" tabindex="0" role="button" aria-label="minus 100 meters: foundation"><rect class="z" x="185" y="290" width="270" height="52" rx="6"></rect></g>
 </svg>
 <div class="ln"><span class="pr">$</span> sonar --depth <span class="in sd">0m</span> <span class="dim">—</span> <span class="t so">the tip: dashboards and reports. the whole stack is below the waterline</span></div>
 </div>
@@ -133,22 +141,37 @@ footer a{color:var(--cy);text-decoration:none}
 <template id="cvt">
 <div class="cvb">
 <div class="cvh"><b>OLEG MIAGKOV</b><span>lead data engineer · fintech · high-load</span><a href="cv.pdf" download="oleg-miagkov-cv.pdf">download pdf ↓</a></div>
-<div class="cvr"><span class="y">2023—now</span><div><b>United Credit Bureau · senior DE → tech lead DE</b><p>Real-time analytics platform for a credit bureau: Spark streaming pipelines, Spark batch marts, business-event monitoring. Scala · Kafka · Delta Lake · OpenShift</p></div></div>
+<div class="cvr"><span class="y">2023—now</span><div><b>United Credit Bureau · senior DE → tech lead DE</b><p>Real-time analytics platform for a credit bureau: Flink streaming pipelines, Spark batch marts, business-event monitoring. Scala · Kafka · Delta Lake · OpenShift</p></div></div>
 <div class="cvr"><span class="y">2022—2023</span><div><b>Action-MCFR · senior data engineer</b><p>Media group data platform: corporate DWH, 40M+ events ingested daily, ML-ready data, Data Catalog. Python · Spark · Hadoop · Greenplum · Airflow · k8s</p></div></div>
 <div class="cvr"><span class="y">2021—2022</span><div><b>EPAM Systems · senior swe · team leader</b><p>Payments analytics for a top sportswear manufacturer: data lake, batch and stream processing. Python · Spark · Kafka · AWS (EMR, S3) · Exasol</p></div></div>
-<div class="cvr"><span class="y">2020—2021</span><div><b>Neoflex · lead DE / senior swe (big data)</b><p>Data lake for a top-3 bank; automotive IoT platform; real-time platform on Lightbend Cloudflow. Scala · Akka · Flink · Spark · Cloudera</p></div></div>
+<div class="cvr"><span class="y">2020—2021</span><div><b>Neoflex · lead DE / senior swe (big data)</b><p>Data lake for a top-3 Russian bank; automotive IoT platform; real-time platform on Lightbend Cloudflow. Scala · Akka · Flink · Spark · Cloudera</p></div></div>
 <div class="cvr"><span class="y">2019—2020</span><div><b>Grid Dynamics · data engineer</b><p>Enterprise data warehouse and data migration to GCP from MSSQL / Oracle / DB2. BigQuery · DataProc · Airflow · Spark</p></div></div>
 <div class="cvr" style="border-bottom:none"><span class="y">2018—2019</span><div><b>Neoflex · software engineer</b><p>Banking microservices: Java 8 · Spring · Kafka Streams · OpenShift</p></div></div>
 <div class="cvf"><b>certifications:</b> Reactive Architecture (CQRS &amp; Event Sourcing) · Hadoop · GCP Big Data &amp; ML Fundamentals · FP in Scala · Data Engineering on GCP<br><b>education:</b> Saratov State Agrarian University (2008—2014)</div>
 </div>
 </template>
+<template id="cvtr">
+<div class="cvb">
+<div class="cvh"><b>OLEG MIAGKOV</b><span>tech lead data engineer · финтех · highload</span><a href="cv.pdf" download="oleg-miagkov-cv.pdf">скачать pdf ↓</a></div>
+<div class="cvr"><span class="y">2023—н.в.</span><div><b>United Credit Bureau · senior DE → tech lead DE</b><p>Реал-тайм аналитическая платформа кредитного бюро: стриминг-пайплайны, batch-витрины, мониторинг бизнес-событий. Scala · Kafka · Delta Lake · OpenShift</p></div></div>
+<div class="cvr"><span class="y">2022—2023</span><div><b>Action-MCFR · senior data engineer</b><p>Платформа данных медиагруппы: корпоративное DWH, 40+ млн событий в день, данные для ML, Data Catalog. Python · Spark · Hadoop · Greenplum · Airflow · k8s</p></div></div>
+<div class="cvr"><span class="y">2021—2022</span><div><b>EPAM Systems · senior swe · team leader</b><p>Аналитика платежей для топ-производителя спортивной одежды: озеро данных, батч- и стрим-обработка. Python · Spark · Kafka · AWS (EMR, S3) · Exasol</p></div></div>
+<div class="cvr"><span class="y">2020—2021</span><div><b>Neoflex · lead DE / senior swe (big data)</b><p>Озеро данных банка из топ-3 РФ; IoT-платформа автопроизводителя; реал-тайм платформа на Lightbend Cloudflow. Scala · Akka · Flink · Spark · Cloudera</p></div></div>
+<div class="cvr"><span class="y">2019—2020</span><div><b>Grid Dynamics · data engineer</b><p>Корпоративное хранилище и миграция данных в GCP из MSSQL / Oracle / DB2. BigQuery · DataProc · Airflow · Spark</p></div></div>
+<div class="cvr" style="border-bottom:none"><span class="y">2018—2019</span><div><b>Neoflex · software engineer</b><p>Банковские микросервисы: Java 8 · Spring · Kafka Streams · OpenShift</p></div></div>
+<div class="cvf"><b>сертификаты:</b> Reactive Architecture (CQRS &amp; Event Sourcing) · Hadoop · GCP Big Data &amp; ML Fundamentals · FP in Scala · Data Engineering on GCP<br><b>образование:</b> СГАУ им. Н.И. Вавилова (2008—2014)</div>
+</div>
+</template>
 <script>
 (function(){
 var hist=document.getElementById('hist'),inp=document.getElementById('cmd');
-var C={
-help:[['ok','available commands:'],['dim','  whoami         who am i'],['dim','  about          summary from the resume'],['dim','  cv             resume: minimalist + pdf'],['dim','  cat stack.txt  the stack (draws an iceberg)'],['dim','  ls projects/   projects'],['dim','  contact        how to reach me'],['dim','  sudo hire      hire the engineer'],['dim','  clear          clear the screen'],['dim','tip: tab to complete, arrow keys for history']],
+var LANG='en';
+try{LANG=localStorage.getItem('oomlang')||'en'}catch(e){}
+var CEN={
+help:[['ok','available commands:'],['dim','  whoami         who am i'],['dim','  about          summary from the resume'],['dim','  cv             resume: minimalist + pdf'],['dim','  cat stack.txt  the stack (draws an iceberg)'],['dim','  ls projects/   projects'],['dim','  contact        how to reach me'],['dim','  sudo hire      hire the engineer'],['dim','  lang ru        по-русски'],['dim','  clear          clear the screen'],['dim','tip: tab to complete, arrow keys for history']],
 whoami:[['ok','oleg miagkov · tech lead data engineer'],['t','high-load data platforms · fintech · 8+ years'],['dim','team & tech lead · java · scala · go · python'],['dim','location: russia · remote-friendly'],['ok','status: open to interesting projects ✓']],
 about:[['ok','# about'],['t','Experienced data engineer: 8+ years building and optimizing high-load systems in the fintech sector.'],['t','Leading a team of engineers — delivering big data projects in Java, Scala and Python.'],['t','Focus: scalable data architectures and effective solutions for data processing and analytics.'],['dim','Next step — data leadership: shaping data strategy and turning it into business impact.']],
+ls:[['in','projects/'],['t','about.md  stack.txt  contacts  cv.pdf']],
 'cat projects/ucb-platform':[['ok','real-time credit bureau platform: Spark streaming, Spark batch'],['dim','Scala· Python · Kafka · Hadoop · S3 · Open MetaData · Airflow']],
 'cat projects/media-data-platform':[['ok','media group data platform: DWH + 40M events a day'],['dim','Python · Spark · Hadoop · Greenplum · Airflow · DataHub']],
 'cat projects/payments-analytics':[['ok','payments analytics: data lake, batch and streaming'],['dim','Python · Spark · Kafka · AWS EMR · S3 · Exasol']],
@@ -181,24 +204,96 @@ cowsay:[['t',' _____________'],['t','< got data?  >'],['t',' -------------'],['t
 matrix:[['ok','wake up, neo — the pipeline has you.'],['dim','follow the white rabbit: sudo hire']],
 coffee:[['t','brewing… done.'],['dim','swap usage +1']],
 '42':[['ok','correct. but the real question was about data quality']],
-weather:[['t','prod region: clear · no incidents · light event streaming']]
+weather:[['t','prod region: clear · no incidents · light event streaming']],
+lang:[['dim','usage: lang ru · lang en']]
 };
-C[':q!']=C[':q'];C[':wq']=C[':q'];C.q=C[':q'];C.emacs=C.nano;C['cd ..']=C.cd;C.uname=C['uname -a'];C.df=C['df -h'];C.free=C['free -h'];C.ps=C['ps aux'];C.top=C['ps aux'];C.htop=C['ps aux'];C.shutdown=C.reboot;C.python3=C.python;C.docker=C['docker ps'];C.kubectl=C['kubectl get pods'];C.brew=C.coffee;
-var FORT=['a pipeline without tests is a pipeline with surprises','it\'s not big data until it stops fitting in excel','the best alert is the one that never fires','two hard things: cache invalidation, naming things, and exactly-once delivery','schema-on-read is just procrastination with extra steps','idempotency is self-care for pipelines'];
-var ICE={
+var CRU={
+help:[['ok','доступные команды:'],['dim','  whoami         кто я'],['dim','  about          описание из резюме'],['dim','  cv             резюме: минимализм + pdf'],['dim','  cat stack.txt  стек (рисует айсберг)'],['dim','  ls projects/   проекты'],['dim','  contact        как связаться'],['dim','  sudo hire      нанять инженера'],['dim','  lang en        switch to english'],['dim','  clear          очистить экран'],['dim','подсказка: tab — дополнение, стрелки — история']],
+whoami:[['ok','олег мягков · tech lead data engineer'],['t','высоконагруженные платформы данных · финтех · 8+ лет'],['dim','team & tech lead · java · scala · go · python'],['dim','локация: россия · remote-friendly'],['ok','статус: открыт к интересным проектам ✓']],
+about:[['ok','# обо мне'],['t','Опытный дата-инженер: 8+ лет разработки и оптимизации высоконагруженных систем в финтех-секторе.'],['t','Руковожу командой разработчиков — реализую проекты по обработке больших данных на Java, Scala и Python.'],['t','Специализация: масштабируемые архитектуры данных и эффективные решения для анализа и обработки информации.'],['dim','Следующий шаг — лидерство в данных: формировать дата-стратегию и превращать её в бизнес-результат.']],
+ls:[['in','projects/'],['t','about.md  stack.txt  contacts  cv.pdf']],
+'cat projects/ucb-platform':[['ok','реал-тайм платформа кредитного бюро: Spark-стриминг и батч'],['dim','Scala · Python · Kafka · Hadoop · S3 · Open MetaData · Airflow']],
+'cat projects/media-data-platform':[['ok','платформа данных медиагруппы: DWH + 40 млн событий в день'],['dim','Python · Spark · Hadoop · Greenplum · Airflow · DataHub']],
+'cat projects/payments-analytics':[['ok','аналитика платежей: озеро данных, батч и стриминг'],['dim','Python · Spark · Kafka · AWS EMR · S3 · Exasol']],
+'cat projects/gcp-migration':[['ok','миграция корпоративного хранилища в Google Cloud'],['dim','BigQuery · DataProc · Airflow · Spark']],
+'sudo hire':[['dim','[sudo] пароль не требуется'],['ok','доступ выдан: достаточно письма на mrobenner@gmail.com ✓']],
+pwd:[['t','/home/omiagkov']],
+'cat cv.pdf':[['err','бинарный файл — используй команду cv или кнопку скачивания']],
+vim:[['err','E37: это сайт — отсюда не выйти даже через :q!']],
+'rm -rf /':[['err','rm: отказано в доступе: прод так просто не удалить']],
+exit:[['err','logout: похоже, прод вас не отпускает']],
+':q':[['err','это не vim — но рефлекс уважаю. (из vim тоже не выйти)']],
+nano:[['err','не найдено. пайплайны тут пишут в vim — из которого тоже не выйти']],
+cd:[['dim','cd: некуда — /home/omiagkov там, где данные']],
+uptime:[['ok','аптайм 8+ лет · 0 выгораний · load average: java, scala, python']],
+'uname -a':[['t','ProdOS omiagkov 8.0-fintech #1 SMP high-load x86_64']],
+'df -h':[['t','/dev/data-lake   объём: петабайты   занято: 87%'],['dim','пора масштабироваться']],
+'free -h':[['t','mem: забита идеями пайплайнов · swap: кофе (занято 6%)']],
+'ps aux':[['dim','PID  COMMAND'],['t','1    spark-submit --class dwh.Core'],['t','2    airflow scheduler'],['t','3    kafka-consumer --topic clickstream'],['ok','все работают · зависших: 0']],
+reboot:[['err','перезагрузка запланирована на: никогда. пайплайны должны течь']],
+'crontab -l':[['t','0 9 * * 1-5   стендап'],['t','0 3 * * *     тяжёлый батч'],['dim','(сплю спокойно во время ночного с 2020-го)']],
+'git status':[['t','on branch main'],['t','опережает «зону комфорта» на 8 коммитов'],['ok','нечего коммитить, карьера чистая']],
+'git blame':[['err','это был DNS. это всегда DNS.']],
+'git push':[['ok','запушено в прод. CI зелёный — как всегда']],
+git:[['dim','использование: git status · git blame · git push']],
+'docker ps':[['dim','CONTAINER        STATUS'],['t','data-platform    Up 8 лет (healthy)']],
+'kubectl get pods':[['ok','все поды Running · рестартов: 0 — как и должно быть']],
+python:[['t','>>> import zen_of_data'],['dim','пайплайны должны быть идемпотентны · явное лучше неявного · кофе помогает']],
+scala:[['dim','sbt загружается… (шутка всё ещё компилируется)']],
+cowsay:[['t',' _____________'],['t','< got data?  >'],['t',' -------------'],['t','        \\   ^__^'],['t','         \\  (oo)\\_______'],['t','            (__)\\       )\\/\\'],['t','                ||----w |'],['t','                ||     ||']],
+matrix:[['ok','проснись, нео — пайплайн уже здесь.'],['dim','следуй за белым кроликом: sudo hire']],
+coffee:[['t','варится… готово.'],['dim','swap +1']],
+'42':[['ok','верно. но настоящий вопрос был про качество данных']],
+weather:[['t','регион prod: ясно · инцидентов нет · лёгкий стриминг событий']],
+lang:[['dim','usage: lang ru · lang en']]
+};
+function alias(D){D[':q!']=D[':q'];D[':wq']=D[':q'];D.q=D[':q'];D.emacs=D.nano;D['cd ..']=D.cd;D.uname=D['uname -a'];D.df=D['df -h'];D.free=D['free -h'];D.ps=D['ps aux'];D.top=D['ps aux'];D.htop=D['ps aux'];D.shutdown=D.reboot;D.python3=D.python;D.docker=D['docker ps'];D.kubectl=D['kubectl get pods'];D.brew=D.coffee}
+alias(CEN);alias(CRU);
+var ICEEN={
 bi:['0m','the tip: dashboards and reports. the whole stack is below the waterline'],
 dwh:['-20m','warehousing: Greenplum, BigQuery, data marts — DWH for fintech and media'],
 proc:['-50m','processing: Spark (Scala) for heavy batch, Flink for real time'],
 base:['-100m','foundation: Kafka, Hadoop, Delta Lake / S3, Kubernetes, Airflow']};
-var CANDS=['help','whoami','about','cv','cat stack.txt','stack','ls','ls projects/','cat projects/ucb-platform','cat projects/media-data-platform','cat projects/payments-analytics','cat projects/gcp-migration','cat ucb-platform','cat media-data-platform','cat payments-analytics','cat gcp-migration','ucb-platform/','media-data-platform/','payments-analytics/','gcp-migration/','contact','sudo hire','clear','date','pwd','neofetch','history','exit'];
+var ICERU={
+bi:['0m','вершина: дашборды и отчёты. весь стек — ниже ватерлинии'],
+dwh:['-20m','хранилище: Greenplum, BigQuery, витрины — DWH в финтехе и медиа'],
+proc:['-50m','обработка: Spark (Scala) — тяжёлые батчи, Flink — реальное время'],
+base:['-100m','фундамент: Kafka, Hadoop, Delta Lake / S3, Kubernetes, Airflow']};
+var FORTEN=['a pipeline without tests is a pipeline with surprises','it\'s not big data until it stops fitting in excel','the best alert is the one that never fires','two hard things: cache invalidation, naming things, and exactly-once delivery','schema-on-read is just procrastination with extra steps','idempotency is self-care for pipelines'];
+var FORTRU=['пайплайн без тестов — пайплайн с сюрпризами','это не big data, пока влезает в excel','лучший алерт — тот, что никогда не сработал','две сложные вещи: инвалидация кэша, имена и exactly-once','schema-on-read — это прокрастинация с лишними шагами','идемпотентность — забота пайплайна о себе'];
+var LOGEN=[['t','[2018] INFO  first prod: ETL on Spark'],['t','[2019] INFO  CDC replication on Kafka'],['err','[2020] WARN  load ×10 in a quarter'],['t','[2020] INFO  held it — scaled the platform'],['t','[2022] INFO  multi-region cluster'],['t','[2024] INFO  feature store for ML'],['ok','[2026] INFO  open to new projects ✓']];
+var LOGRU=[['t','[2018] INFO  первый прод: ETL на Spark'],['t','[2019] INFO  CDC-репликация на Kafka'],['err','[2020] WARN  нагрузка ×10 за квартал'],['t','[2020] INFO  выдержали — отмасштабировали платформу'],['t','[2022] INFO  мультирегиональный кластер'],['t','[2024] INFO  feature store для ML'],['ok','[2026] INFO  открыт к новым проектам ✓']];
+var T={
+en:{stack:'the stack is an iceberg: only BI is above the surface',cv:'resume — terminal edition, full version in pdf:',date:'your local time — the engineer is most likely in a daily standup right now',nf:': command not found',hint:'try: help',sl:'you meant ls, didn\'t you?',ph:'click a folder — or: cat projects/<name>',sel:'1 row returned — see cv · query time: 0.042s',kill:'kill: engineer\'s processes are unkillable — nohup since 2018',chmod:'chmod: too permissive — the security team has been notified ;)',sw:'switched to english — lang ru вернёт русский',inp:'type a command… (help, tab to autocomplete, ↑ history)',vcf:'save contact ↓'},
+ru:{stack:'стек — это айсберг: на поверхности только BI',cv:'резюме — версия для терминала, полная — в pdf:',date:'по твоим часам — инженер сейчас, скорее всего, на дейлике',nf:': команда не найдена',hint:'попробуй: help',sl:'ты ведь хотел набрать ls, да?',ph:'кликни папку — или: cat projects/<имя>',sel:'возвращена 1 строка — смотри cv · время запроса: 0.042s',kill:'kill: процессы инженера не убиваются — nohup с 2018-го',chmod:'chmod: слишком жирные права — служба безопасности уведомлена ;)',sw:'переключился на русский — lang en switches back',inp:'введи команду… (help, tab — дополнение, ↑ — история)',vcf:'сохранить контакт ↓'}
+};
+var RUL={L1:'уровень моря · то, что видят все',L2:'BI · дашборды',L3:'отчёты — вершина',L5:'Greenplum · витрины · SQL',L6:'обработка',L8:'фундамент'};
+var C,ICE,FORT,LOG;
+function applyLang(l){
+LANG=l;
+try{localStorage.setItem('oomlang',l)}catch(e){}
+C=l==='ru'?CRU:CEN;
+ICE=l==='ru'?ICERU:ICEEN;
+FORT=l==='ru'?FORTRU:FORTEN;
+LOG=l==='ru'?LOGRU:LOGEN;
+inp.placeholder=T[l].inp;
+}
+applyLang(LANG);
+var PROJ=['ucb-platform','media-data-platform','payments-analytics','gcp-migration'];
+function projKey(s){
+s=s.replace(/\/+$/,'');
+if(s.indexOf('projects/')===0)s=s.slice(9);
+return PROJ.indexOf(s)>=0?s:null;
+}
+var CANDS=['help','whoami','about','cv','cat stack.txt','stack','ls','ls projects/','cat projects/ucb-platform','cat projects/media-data-platform','cat projects/payments-analytics','cat projects/gcp-migration','cat ucb-platform','cat media-data-platform','cat payments-analytics','cat gcp-migration','ucb-platform/','media-data-platform/','payments-analytics/','gcp-migration/','contact','sudo hire','clear','date','pwd','neofetch','history','lang ru','lang en','exit'];
 var H=[],hi=0;
-var KNX=['cat stack.txt','stack','cv','resume','contact','date','history','neofetch','sl','fortune','tail -f career.log','tail -f','tail','clear'];
+var KNX=['cat stack.txt','stack','cv','resume','contact','date','history','neofetch','sl','fortune','tail -f career.log','tail -f','tail','clear','lang','lang ru','lang en'];
 function tname(s){
 if(s.indexOf('echo')===0)return 'echo';
 if(s.indexOf('kill')===0)return 'kill';
 if(s.indexOf('chmod')===0)return 'chmod';
 if(s.toLowerCase().indexOf('select')===0)return 'select';
-if(C[s]||projKey(s)||KNX.indexOf(s)>=0)return s;
+if(CEN[s]||CRU[s]||projKey(s)||KNX.indexOf(s)>=0)return s;
 return '_unknown';
 }
 function track(s){try{if(window.goatcounter&&window.goatcounter.count)window.goatcounter.count({path:'cmd/'+tname(s),event:true})}catch(e){}}
@@ -209,7 +304,11 @@ hist.appendChild(n);return n;
 }
 function addIce(){
 var n=clone('icet');
+if(LANG==='ru'){
+Object.keys(RUL).forEach(function(k){var el=n.querySelector('.'+k);if(el)el.textContent=RUL[k]});
+}
 var sd=n.querySelector('.sd'),so=n.querySelector('.so');
+so.textContent=ICE.bi[1];
 n.querySelectorAll('.zone').forEach(function(z){
 function on(){
 n.querySelectorAll('.zone').forEach(function(x){x.classList.remove('sel')});
@@ -219,25 +318,23 @@ sd.textContent=d[0];so.textContent=d[1];
 }
 z.addEventListener('click',on);
 z.addEventListener('mouseenter',on);
+z.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();on()}});
 });
 }
 function addContact(){
-[['mail      ','mailto:mrobenner@gmail.com','mrobenner@gmail.com'],['github    ','https://github.com/obenner','github.com/obenner'],['linkedin  ','https://www.linkedin.com/in/omiagkov','linkedin.com/in/omiagkov'],['cv        ','cv.pdf','cv.pdf ↓']].forEach(function(r){
+[['mail      ','mailto:mrobenner@gmail.com','mrobenner@gmail.com',''],['github    ','https://github.com/obenner','github.com/obenner',''],['linkedin  ','https://www.linkedin.com/in/omiagkov','linkedin.com/in/omiagkov',''],['cv        ','cv.pdf','cv.pdf ↓','oleg-miagkov-cv.pdf'],['vcard     ','oleg-miagkov.vcf',T[LANG].vcf,'oleg-miagkov.vcf']].forEach(function(r){
 var d=document.createElement('div');d.className='ln';
 var l=document.createElement('span');l.className='ok';l.textContent=r[0];
 var a=document.createElement('a');a.className='in';a.href=r[1];a.textContent=r[2];a.style.textDecoration='none';
+if(r[3])a.setAttribute('download',r[3]);
 d.appendChild(l);d.appendChild(a);hist.appendChild(d);
 });
 }
-var PROJ=['ucb-platform','media-data-platform','payments-analytics','gcp-migration'];
-function projKey(s){
-s=s.replace(/\/+$/,'');
-if(s.indexOf('projects/')===0)s=s.slice(9);
-return PROJ.indexOf(s)>=0?s:null;
-}
 function clickSpan(txt,cls,cb){
 var a=document.createElement('span');a.className=cls+' pj';a.textContent=txt;
+a.tabIndex=0;a.setAttribute('role','button');
 a.addEventListener('click',cb);
+a.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();cb()}});
 return a;
 }
 function addProjects(){
@@ -246,7 +343,7 @@ var d=document.createElement('div');d.className='ln';
 d.appendChild(clickSpan(p+'/','in',function(){run('cat projects/'+p)}));
 hist.appendChild(d);
 });
-add('dim','click a folder — or: cat projects/<name>');
+add('dim',T[LANG].ph);
 }
 function addLs(){
 var d=document.createElement('div');d.className='ln';
@@ -277,11 +374,10 @@ t.style.cssText='position:relative;display:inline-block;white-space:pre;left:100
 t.textContent='      ====        ________\n  _D _|  |_______/        \\__\n   |(_)---  |   H\\________/ |\n   /    |   |   H   |  |    |\n  +--+--+---+---+---+--+----+';
 t.addEventListener('animationend',function(){w.style.display='none'});
 w.appendChild(t);hist.appendChild(w);
-add('dim','you meant ls, didn\'t you?');
+add('dim',T[LANG].sl);
 }
 function addTail(){
-var L=[['t','[2018] INFO  first prod: ETL on Spark'],['t','[2019] INFO  CDC replication on Kafka'],['err','[2020] WARN  load ×10 in a quarter'],['t','[2020] INFO  held it — scaled the platform'],['t','[2022] INFO  multi-region cluster'],['t','[2024] INFO  feature store for ML'],['ok','[2026] INFO  open to new projects ✓']];
-var i=0;
+var L=LOG,i=0;
 var iv=setInterval(function(){
 if(i>=L.length){clearInterval(iv);add('dim','^C');inp.scrollIntoView({block:'nearest'});return}
 add(L[i][0],L[i][1]);i++;inp.scrollIntoView({block:'nearest'});
@@ -296,12 +392,15 @@ d.innerHTML='<span class="pr">omiagkov@prod:~$</span> <span class="in"></span>';
 d.querySelector('.in').textContent=cmd;
 hist.appendChild(d);
 if(cmd==='clear'){hist.innerHTML='';return}
-if(cmd==='cat stack.txt'||cmd==='stack'){
-add('ok','the stack is an iceberg: only BI is above the surface');
+if(cmd==='lang ru'||cmd==='lang en'){
+applyLang(cmd.slice(5));
+add('ok',T[LANG].sw);
+}else if(cmd==='cat stack.txt'||cmd==='stack'){
+add('ok',T[LANG].stack);
 addIce();
 }else if(cmd==='cv'||cmd==='resume'){
-add('ok','resume — terminal edition, full version in pdf:');
-clone('cvt');
+add('ok',T[LANG].cv);
+clone(LANG==='ru'?'cvtr':'cvt');
 }else if(cmd==='contact'){
 addContact();
 }else if(cmd==='ls'){
@@ -319,20 +418,20 @@ add('ok',FORT[Math.floor(Math.random()*FORT.length)]);
 }else if(cmd==='tail -f career.log'||cmd==='tail -f'||cmd==='tail'){
 addTail();
 }else if(cmd==='date'){
-add('t',new Date().toLocaleString('en-US',{day:'numeric',month:'long',year:'numeric',hour:'2-digit',minute:'2-digit'}));
-add('dim','your local time — the engineer is most likely in a daily standup right now');
+add('t',new Date().toLocaleString(LANG==='ru'?'ru-RU':'en-US',{day:'numeric',month:'long',year:'numeric',hour:'2-digit',minute:'2-digit'}));
+add('dim',T[LANG].date);
 }else{
 var out=C[cmd];
 if(out){out.forEach(function(l){add(l[0],l[1])})}
 else if(cmd.indexOf('echo ')===0){add('t',cmd.slice(5))}
 else if(cmd==='echo'){add('t',' ')}
-else if(cmd.toLowerCase().indexOf('select')===0){add('ok','1 row returned — see cv · query time: 0.042s')}
-else if(cmd.indexOf('kill')===0){add('err','kill: engineer\'s processes are unkillable — nohup since 2018')}
-else if(cmd.indexOf('chmod')===0){add('err','chmod: too permissive — the security team has been notified ;)')}
+else if(cmd.toLowerCase().indexOf('select')===0){add('ok',T[LANG].sel)}
+else if(cmd.indexOf('kill')===0){add('err',T[LANG].kill)}
+else if(cmd.indexOf('chmod')===0){add('err',T[LANG].chmod)}
 else{
 var pk=cmd.indexOf('cat ')===0?projKey(cmd.slice(4).trim()):projKey(cmd);
 if(pk){C['cat projects/'+pk].forEach(function(l){add(l[0],l[1])})}
-else{add('err','bash: '+cmd+': command not found');add('dim','try: help')}
+else{add('err','bash: '+cmd+T[LANG].nf);add('dim',T[LANG].hint)}
 }
 }
 if(!noscroll)inp.scrollIntoView({block:'nearest'});
@@ -366,10 +465,21 @@ else if(e.key==='ArrowRight'&&SUG&&inp.selectionStart===inp.value.length){e.prev
 else if(e.key==='ArrowUp'){if(H.length&&hi>0){hi--;inp.value=H[hi]}e.preventDefault();ghost()}
 else if(e.key==='ArrowDown'){if(hi<H.length){hi++;inp.value=hi===H.length?'':H[hi]}e.preventDefault();ghost()}
 });
-document.querySelectorAll('.qc').forEach(function(c){c.addEventListener('click',function(){run(c.textContent)})});
+document.querySelectorAll('.qc').forEach(function(c){
+c.addEventListener('click',function(){run(c.textContent)});
+c.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();run(c.textContent)}});
+});
 document.body.addEventListener('click',function(){if(!window.getSelection().toString()&&!('ontouchstart' in window))inp.focus()});
 var yr=document.getElementById('yr');
 if(yr)yr.textContent=new Date().getFullYear();
+function fromHash(){
+var h='';
+try{h=decodeURIComponent(location.hash.slice(1))}catch(e){h=location.hash.slice(1)}
+h=h.replace(/\+/g,' ').trim();
+if(h)run(h,true);
+}
+window.addEventListener('hashchange',fromHash);
+fromHash();
 if(!('ontouchstart' in window))inp.focus();
 })();
 </script>
