@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Oleg Miagkov — Lead Data Engineer</title>
+<meta name="description" content="Oleg Miagkov — Lead Data Engineer: high-load data platforms for fintech. Spark · Kafka · Scala · Python. A terminal-style site: type help.">
+<meta property="og:title" content="Oleg Miagkov — Lead Data Engineer">
+<meta property="og:description" content="High-load data platforms: Spark · Kafka · Scala · Python. A terminal-style site — type help.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23060a10'/><rect x='9' y='7' width='8' height='18' fill='%233dffa0'/></svg>">
+<style>
+:root{--bg:#060a10;--pn:#0a121b;--bd:#1b2c3b;--gr:#3dffa0;--cy:#45e1ff;--pk:#ff4fa3;--tx:#eaf6ff;--t2:#a8c0d3;--mu:#7d93a6;--mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,Consolas,monospace;--sans:-apple-system,"Segoe UI",Roboto,sans-serif}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--t2);font-family:var(--mono);font-size:14px}
+.wrap{max-width:860px;margin:0 auto;padding:0 20px 46px}
+.hd{display:flex;align-items:center;gap:12px;padding:18px 0 14px;border-bottom:1px solid #12202c;color:var(--mu);font-size:13px;flex-wrap:wrap}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--gr);display:inline-block;animation:b 1.4s steps(2) infinite}
+@keyframes b{50%{opacity:0}}
+.chips{display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:14px 0 0}
+.qc{border:1px solid rgba(69,225,255,.38);color:var(--cy);border-radius:999px;padding:4px 12px;font-size:12.5px;cursor:pointer;user-select:none}
+.qc:hover{border-color:rgba(69,225,255,.75)}
+.hist{padding:16px 0 0;line-height:1.9}
+.ln{white-space:pre-wrap;word-break:break-word}
+.pr{color:var(--gr);font-weight:500}
+.in{color:var(--cy)}
+.ok{color:var(--gr)}
+.t{color:var(--t2)}
+.dim{color:var(--mu)}
+.err{color:var(--pk)}
+.pj{cursor:pointer}
+.pj:hover{text-decoration:underline}
+.iw{position:relative;flex:1;display:flex;min-width:0}
+.iw input{width:100%}
+#gh{position:absolute;inset:0;display:flex;align-items:center;pointer-events:none;white-space:pre;overflow:hidden;font-size:14px}
+#ghA{visibility:hidden}
+#ghB{color:var(--mu)}
+@keyframes slgo{to{left:-620px}}
+.row{display:flex;gap:10px;align-items:center;padding:10px 0 0}
+.row input{flex:1;background:none;border:none;outline:none;color:var(--cy);font-family:var(--mono);font-size:14px;caret-color:var(--gr);min-width:0}
+.ice{margin:10px 0 2px;max-width:640px}
+.ice svg{width:100%;height:auto;display:block}
+.zone{cursor:pointer}
+.zone rect.z{fill:transparent;stroke:transparent;stroke-dasharray:5 4;transition:stroke .15s}
+.zone:hover rect.z{stroke:rgba(69,225,255,.45)}
+.zone.sel rect.z{stroke:rgba(61,255,160,.55)}
+.cvb{margin:10px 0 4px;max-width:700px;border:1px solid var(--bd);border-radius:12px;background:var(--pn);padding:14px 18px}
+.cvh{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;padding-bottom:11px;border-bottom:1px solid #12202c}
+.cvh b{color:var(--tx);font-weight:600;letter-spacing:.05em;font-size:14px}
+.cvh span{color:var(--mu);font-size:12.5px}
+.cvh a{margin-left:auto;color:#06231a;background:var(--gr);border-radius:7px;padding:5px 13px;font-size:12px;text-decoration:none;font-weight:600}
+.cvr{display:flex;gap:14px;padding:10px 0;border-bottom:1px solid #0e1822}
+.cvr .y{flex:0 0 88px;color:var(--cy);font-size:12px;padding-top:2px}
+.cvr b{display:block;color:var(--tx);font-weight:500;font-size:13px}
+.cvr p{margin:3px 0 0;color:var(--mu);font-size:12.5px;line-height:1.6;font-family:var(--sans)}
+.cvf{padding-top:11px;color:var(--mu);font-size:12px;line-height:1.85;font-family:var(--sans)}
+.cvf b{color:var(--t2);font-weight:500}
+footer{border-top:1px solid #12202c;padding:14px 0;margin-top:22px;font-size:12.5px;color:var(--mu)}
+footer a{color:var(--cy);text-decoration:none}
+@media(max-width:560px){
+.wrap{padding:0 14px 40px}
+.cvr{flex-direction:column;gap:3px}
+.cvr .y{flex:none}
+.cvh a{margin-left:0}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="hd"><span style="color:var(--cy)">bash</span><span>—</span><span>oleg miagkov · lead data engineer · terminal site</span><span style="margin-left:auto;display:flex;align-items:center;gap:6px;color:var(--gr);font-size:12px"><span class="dot"></span>tty1</span></div>
+<div class="chips">
+<span class="dim" style="font-size:12.5px">try:</span>
+<span class="qc">help</span><span class="qc">whoami</span><span class="qc">about</span><span class="qc">cv</span><span class="qc">cat stack.txt</span><span class="qc">ls projects/</span><span class="qc">contact</span><span class="qc">sudo hire</span>
+</div>
+<div class="hist" id="hist" aria-live="polite">
+<div class="ln"><span class="pr">omiagkov@prod:~$</span> <span class="in">whoami</span></div>
+<div class="ln ok">oleg miagkov · tech lead data engineer</div>
+<div class="ln t">high-load data platforms · fintech · 8+ years</div>
+<div class="ln dim">team &amp; tech lead · java · scala · go · python</div>
+<div class="ln dim">location: russia · remote-friendly</div>
+<div class="ln ok">status: open to interesting projects ✓</div>
+<div class="ln dim" style="padding-top:8px">// type help to explore — or click a chip above</div>
+</div>
+<div class="row"><span class="pr">omiagkov@prod:~$</span><span class="iw"><span id="gh" aria-hidden="true"><span id="ghA"></span><span id="ghB"></span></span><input id="cmd" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="type a command… (help, tab to autocomplete, ↑ history)"></span></div>
+<footer>// © <span id="yr">2026</span> oleg miagkov · terminal site, no frameworks · <a href="cv.pdf" download="oleg-miagkov-cv.pdf">cv.pdf</a> · <a href="mailto:mrobenner@gmail.com">email</a> · <a href="https://github.com/mrobenner">github</a> · <a href="https://www.linkedin.com/in/omiagkov">linkedin</a></footer>
+</div>
+<template id="icet">
+<div class="ice">
+<svg viewBox="0 0 640 360" role="img" aria-label="the stack as an iceberg: BI and dashboards above the water, DWH, processing and foundation below — click a depth">
+<rect x="16" y="110" width="608" height="234" fill="rgba(69,225,255,.05)"></rect>
+<line x1="16" y1="110" x2="624" y2="110" stroke="rgba(69,225,255,.55)" stroke-width="1.5"></line>
+<text x="600" y="102" text-anchor="end" font-size="11" fill="#7d93a6" style="font-family:var(--mono)">sea level · what everyone sees</text>
+<polygon points="300,38 250,110 360,110" fill="rgba(234,246,255,.09)" stroke="#eaf6ff" stroke-width="1.5"></polygon>
+<polyline points="300,38 292,110" fill="none" stroke="rgba(234,246,255,.35)"></polyline>
+<polygon points="250,110 360,110 415,150 430,230 390,320 280,330 220,250 200,170" fill="rgba(69,225,255,.06)" stroke="rgba(69,225,255,.5)" stroke-width="1.5"></polygon>
+<polyline points="292,110 285,200 300,330" fill="none" stroke="rgba(69,225,255,.25)"></polyline>
+<polyline points="360,110 380,210 350,326" fill="none" stroke="rgba(69,225,255,.2)"></polyline>
+<line x1="185" y1="150" x2="450" y2="150" stroke="#1d3a4d" stroke-dasharray="4 5"></line>
+<line x1="185" y1="220" x2="450" y2="220" stroke="#1d3a4d" stroke-dasharray="4 5"></line>
+<line x1="185" y1="290" x2="450" y2="290" stroke="#1d3a4d" stroke-dasharray="4 5"></line>
+<text x="40" y="114" font-size="11" fill="#7d93a6" style="font-family:var(--mono)">0 m</text>
+<text x="40" y="154" font-size="11" fill="#7d93a6" style="font-family:var(--mono)">−20 m</text>
+<text x="40" y="224" font-size="11" fill="#7d93a6" style="font-family:var(--mono)">−50 m</text>
+<text x="40" y="294" font-size="11" fill="#7d93a6" style="font-family:var(--mono)">−100 m</text>
+<text x="468" y="72" font-size="12" fill="#eaf6ff" font-weight="500" style="font-family:var(--mono)">BI · dashboards</text>
+<text x="468" y="88" font-size="11" fill="#7d93a6" style="font-family:var(--sans)">reports — the tip</text>
+<text x="468" y="180" font-size="12" fill="#45e1ff" font-weight="500" style="font-family:var(--mono)">DWH</text>
+<text x="468" y="196" font-size="11" fill="#7d93a6" style="font-family:var(--sans)">Greenplum · data marts · SQL</text>
+<text x="468" y="248" font-size="12" fill="#45e1ff" font-weight="500" style="font-family:var(--mono)">processing</text>
+<text x="468" y="264" font-size="11" fill="#7d93a6" style="font-family:var(--sans)">Spark · Flink</text>
+<text x="468" y="312" font-size="12" fill="#45e1ff" font-weight="500" style="font-family:var(--mono)">foundation</text>
+<text x="468" y="328" font-size="11" fill="#7d93a6" style="font-family:var(--sans)">Kafka · Hadoop · S3 · k8s</text>
+<circle r="2" fill="rgba(69,225,255,.5)"><animateMotion dur="5s" repeatCount="indefinite" path="M235,300 V125"></animateMotion></circle>
+<circle r="1.5" fill="rgba(69,225,255,.4)"><animateMotion dur="6.5s" repeatCount="indefinite" path="M405,280 V125"></animateMotion></circle>
+<circle r="2" fill="rgba(69,225,255,.45)"><animateMotion dur="4.2s" repeatCount="indefinite" path="M320,340 V125"></animateMotion></circle>
+<text font-size="12" fill="#ff4fa3" style="font-family:var(--mono)"><animateMotion dur="16s" repeatCount="indefinite" path="M60,265 H580"></animateMotion>&gt;&lt;&gt;</text>
+<g class="zone sel" data-k="bi"><rect class="z" x="185" y="30" width="270" height="76" rx="6"></rect></g>
+<g class="zone" data-k="dwh"><rect class="z" x="185" y="114" width="270" height="100" rx="6"></rect></g>
+<g class="zone" data-k="proc"><rect class="z" x="185" y="218" width="270" height="68" rx="6"></rect></g>
+<g class="zone" data-k="base"><rect class="z" x="185" y="290" width="270" height="52" rx="6"></rect></g>
+</svg>
+<div class="ln"><span class="pr">$</span> sonar --depth <span class="in sd">0m</span> <span class="dim">—</span> <span class="t so">the tip: dashboards and reports. the whole stack is below the waterline</span></div>
+</div>
+</template>
+<template id="cvt">
+<div class="cvb">
+<div class="cvh"><b>OLEG MIAGKOV</b><span>lead data engineer · fintech · high-load</span><a href="cv.pdf" download="oleg-miagkov-cv.pdf">download pdf ↓</a></div>
+<div class="cvr"><span class="y">2023—now</span><div><b>United Credit Bureau · senior DE → tech lead DE</b><p>Real-time analytics platform for a credit bureau: Spark streaming pipelines, Spark batch marts, business-event monitoring. Scala · Kafka · Delta Lake · OpenShift</p></div></div>
+<div class="cvr"><span class="y">2022—2023</span><div><b>Action-MCFR · senior data engineer</b><p>Media group data platform: corporate DWH, 40M+ events ingested daily, ML-ready data, Data Catalog. Python · Spark · Hadoop · Greenplum · Airflow · k8s</p></div></div>
+<div class="cvr"><span class="y">2021—2022</span><div><b>EPAM Systems · senior swe · team leader</b><p>Payments analytics for a top sportswear manufacturer: data lake, batch and stream processing. Python · Spark · Kafka · AWS (EMR, S3) · Exasol</p></div></div>
+<div class="cvr"><span class="y">2020—2021</span><div><b>Neoflex · lead DE / senior swe (big data)</b><p>Data lake for a top-3 bank; automotive IoT platform; real-time platform on Lightbend Cloudflow. Scala · Akka · Flink · Spark · Cloudera</p></div></div>
+<div class="cvr"><span class="y">2019—2020</span><div><b>Grid Dynamics · data engineer</b><p>Enterprise data warehouse and data migration to GCP from MSSQL / Oracle / DB2. BigQuery · DataProc · Airflow · Spark</p></div></div>
+<div class="cvr" style="border-bottom:none"><span class="y">2018—2019</span><div><b>Neoflex · software engineer</b><p>Banking microservices: Java 8 · Spring · Kafka Streams · OpenShift</p></div></div>
+<div class="cvf"><b>certifications:</b> Reactive Architecture (CQRS &amp; Event Sourcing) · Hadoop · GCP Big Data &amp; ML Fundamentals · FP in Scala · Data Engineering on GCP<br><b>education:</b> Saratov State Agrarian University (2008—2014)</div>
+</div>
+</template>
+<script>
+(function(){
+var hist=document.getElementById('hist'),inp=document.getElementById('cmd');
+var C={
+help:[['ok','available commands:'],['dim','  whoami         who am i'],['dim','  about          summary from the resume'],['dim','  cv             resume: minimalist + pdf'],['dim','  cat stack.txt  the stack (draws an iceberg)'],['dim','  ls projects/   projects'],['dim','  contact        how to reach me'],['dim','  sudo hire      hire the engineer'],['dim','  clear          clear the screen'],['dim','tip: tab to complete, arrow keys for history']],
+whoami:[['ok','oleg miagkov · tech lead data engineer'],['t','high-load data platforms · fintech · 8+ years'],['dim','team & tech lead · java · scala · go · python'],['dim','location: russia · remote-friendly'],['ok','status: open to interesting projects ✓']],
+about:[['ok','# about'],['t','Experienced data engineer: 8+ years building and optimizing high-load systems in the fintech sector.'],['t','Leading a team of engineers — delivering big data projects in Java, Scala and Python.'],['t','Focus: scalable data architectures and effective solutions for data processing and analytics.'],['dim','Next step — data leadership: shaping data strategy and turning it into business impact.']],
+'cat projects/ucb-platform':[['ok','real-time credit bureau platform: Spark streaming, Spark batch'],['dim','Scala· Python · Kafka · Hadoop · S3 · Open MetaData · Airflow']],
+'cat projects/media-data-platform':[['ok','media group data platform: DWH + 40M events a day'],['dim','Python · Spark · Hadoop · Greenplum · Airflow · DataHub']],
+'cat projects/payments-analytics':[['ok','payments analytics: data lake, batch and streaming'],['dim','Python · Spark · Kafka · AWS EMR · S3 · Exasol']],
+'cat projects/gcp-migration':[['ok','enterprise data warehouse migration to Google Cloud'],['dim','BigQuery · DataProc · Airflow · Spark']],
+'sudo hire':[['dim','[sudo] no password required'],['ok','access granted: an email to mrobenner@gmail.com is enough ✓']],
+pwd:[['t','/home/omiagkov']],
+'cat cv.pdf':[['err','binary file — use the cv command or the download button']],
+vim:[['err','E37: this is a website — no way out, not even :q!']],
+'rm -rf /':[['err','rm: permission denied: prod is not that easy to destroy']],
+exit:[['err','logout: looks like prod will not let you go']],
+':q':[['err','this is not vim — but the reflex is respected. (vim won\'t let you out either)']],
+nano:[['err','not found. pipelines here are written in vim — which you also can\'t exit']],
+cd:[['dim','cd: nowhere to go — /home/omiagkov is where the data lives']],
+uptime:[['ok','up 8+ years · 0 burnouts · load average: java, scala, python']],
+'uname -a':[['t','ProdOS omiagkov 8.0-fintech #1 SMP high-load x86_64']],
+'df -h':[['t','/dev/data-lake   size: petabytes   used: 87%'],['dim','time to scale out']],
+'free -h':[['t','mem: full of pipeline ideas · swap: coffee (6% used)']],
+'ps aux':[['dim','PID  COMMAND'],['t','1    spark-submit --class dwh.Core'],['t','2    airflow scheduler'],['t','3    kafka-consumer --topic clickstream'],['ok','all running · 0 stuck']],
+reboot:[['err','shutdown scheduled: never. pipelines must flow']],
+'crontab -l':[['t','0 9 * * 1-5   standup'],['t','0 3 * * *     heavy-batch'],['dim','(sleeping through the 3am one since 2020)']],
+'git status':[['t','on branch main'],['t','ahead of \'comfort-zone\' by 8 commits'],['ok','nothing to commit, career is clean']],
+'git blame':[['err','it was DNS. it\'s always DNS.']],
+'git push':[['ok','pushed to prod. CI is green — as always']],
+git:[['dim','usage: git status · git blame · git push']],
+'docker ps':[['dim','CONTAINER        STATUS'],['t','data-platform    Up 8 years (healthy)']],
+'kubectl get pods':[['ok','all pods Running · restarts: 0 — the way it should be']],
+python:[['t','>>> import zen_of_data'],['dim','pipelines should be idempotent · explicit is better than implicit · coffee helps']],
+scala:[['dim','sbt loading… (this joke is still compiling)']],
+cowsay:[['t',' _____________'],['t','< got data?  >'],['t',' -------------'],['t','        \\   ^__^'],['t','         \\  (oo)\\_______'],['t','            (__)\\       )\\/\\'],['t','                ||----w |'],['t','                ||     ||']],
+matrix:[['ok','wake up, neo — the pipeline has you.'],['dim','follow the white rabbit: sudo hire']],
+coffee:[['t','brewing… done.'],['dim','swap usage +1']],
+'42':[['ok','correct. but the real question was about data quality']],
+weather:[['t','prod region: clear · no incidents · light event streaming']]
+};
+C[':q!']=C[':q'];C[':wq']=C[':q'];C.q=C[':q'];C.emacs=C.nano;C['cd ..']=C.cd;C.uname=C['uname -a'];C.df=C['df -h'];C.free=C['free -h'];C.ps=C['ps aux'];C.top=C['ps aux'];C.htop=C['ps aux'];C.shutdown=C.reboot;C.python3=C.python;C.docker=C['docker ps'];C.kubectl=C['kubectl get pods'];C.brew=C.coffee;
+var FORT=['a pipeline without tests is a pipeline with surprises','it\'s not big data until it stops fitting in excel','the best alert is the one that never fires','two hard things: cache invalidation, naming things, and exactly-once delivery','schema-on-read is just procrastination with extra steps','idempotency is self-care for pipelines'];
+var ICE={
+bi:['0m','the tip: dashboards and reports. the whole stack is below the waterline'],
+dwh:['-20m','warehousing: Greenplum, BigQuery, data marts — DWH for fintech and media'],
+proc:['-50m','processing: Spark (Scala) for heavy batch, Flink for real time'],
+base:['-100m','foundation: Kafka, Hadoop, Delta Lake / S3, Kubernetes, Airflow']};
+var CANDS=['help','whoami','about','cv','cat stack.txt','stack','ls','ls projects/','cat projects/ucb-platform','cat projects/media-data-platform','cat projects/payments-analytics','cat projects/gcp-migration','cat ucb-platform','cat media-data-platform','cat payments-analytics','cat gcp-migration','ucb-platform/','media-data-platform/','payments-analytics/','gcp-migration/','contact','sudo hire','clear','date','pwd','neofetch','history','exit'];
+var H=[],hi=0;
+function add(cls,txt){var d=document.createElement('div');d.className='ln '+cls;d.textContent=txt;hist.appendChild(d)}
+function clone(id){
+var n=document.getElementById(id).content.firstElementChild.cloneNode(true);
+hist.appendChild(n);return n;
+}
+function addIce(){
+var n=clone('icet');
+var sd=n.querySelector('.sd'),so=n.querySelector('.so');
+n.querySelectorAll('.zone').forEach(function(z){
+function on(){
+n.querySelectorAll('.zone').forEach(function(x){x.classList.remove('sel')});
+z.classList.add('sel');
+var d=ICE[z.getAttribute('data-k')];
+sd.textContent=d[0];so.textContent=d[1];
+}
+z.addEventListener('click',on);
+z.addEventListener('mouseenter',on);
+});
+}
+function addContact(){
+[['mail      ','mailto:mrobenner@gmail.com','mrobenner@gmail.com'],['github    ','https://github.com/mrobenner','github.com/mrobenner'],['linkedin  ','https://www.linkedin.com/in/omiagkov','linkedin.com/in/omiagkov'],['cv        ','cv.pdf','cv.pdf ↓']].forEach(function(r){
+var d=document.createElement('div');d.className='ln';
+var l=document.createElement('span');l.className='ok';l.textContent=r[0];
+var a=document.createElement('a');a.className='in';a.href=r[1];a.textContent=r[2];a.style.textDecoration='none';
+d.appendChild(l);d.appendChild(a);hist.appendChild(d);
+});
+}
+var PROJ=['ucb-platform','media-data-platform','payments-analytics','gcp-migration'];
+function projKey(s){
+s=s.replace(/\/+$/,'');
+if(s.indexOf('projects/')===0)s=s.slice(9);
+return PROJ.indexOf(s)>=0?s:null;
+}
+function clickSpan(txt,cls,cb){
+var a=document.createElement('span');a.className=cls+' pj';a.textContent=txt;
+a.addEventListener('click',cb);
+return a;
+}
+function addProjects(){
+PROJ.forEach(function(p){
+var d=document.createElement('div');d.className='ln';
+d.appendChild(clickSpan(p+'/','in',function(){run('cat projects/'+p)}));
+hist.appendChild(d);
+});
+add('dim','click a folder — or: cat projects/<name>');
+}
+function addLs(){
+var d=document.createElement('div');d.className='ln';
+d.appendChild(clickSpan('projects/','in',function(){run('ls projects/')}));
+hist.appendChild(d);
+var f=document.createElement('div');f.className='ln';
+[['about.md','about'],['stack.txt','cat stack.txt'],['contacts','contact'],['cv.pdf','cv']].forEach(function(r,i){
+if(i)f.appendChild(document.createTextNode('  '));
+f.appendChild(clickSpan(r[0],'t',function(){run(r[1])}));
+});
+hist.appendChild(f);
+}
+function addNeofetch(){
+['███╗   ███╗ ██████╗','████╗ ████║ ██╔══██╗','██╔████╔██║ ██████╔╝','██║╚██╔╝██║ ██╔══██╗','██║ ╚═╝ ██║ ██║  ██║','╚═╝     ╚═╝ ╚═╝  ╚═╝'].forEach(function(l){add('ok',l)});
+add('t','os:      production');
+add('t','host:    oleg miagkov');
+add('t','uptime:  8+ years');
+add('t','shell:   data-engineer');
+add('t','cpu:     spark + flink');
+add('t','memory:  s3://lake');
+add('ok','status:  open to projects ✓');
+}
+function addSl(){
+var w=document.createElement('div');
+w.style.overflow='hidden';w.style.whiteSpace='pre';
+var t=document.createElement('div');
+t.style.cssText='position:relative;display:inline-block;white-space:pre;left:100%;animation:slgo 6s linear forwards;color:#a8c0d3';
+t.textContent='      ====        ________\n  _D _|  |_______/        \\__\n   |(_)---  |   H\\________/ |\n   /    |   |   H   |  |    |\n  +--+--+---+---+---+--+----+';
+t.addEventListener('animationend',function(){w.style.display='none'});
+w.appendChild(t);hist.appendChild(w);
+add('dim','you meant ls, didn\'t you?');
+}
+function addTail(){
+var L=[['t','[2018] INFO  first prod: ETL on Spark'],['t','[2019] INFO  CDC replication on Kafka'],['err','[2020] WARN  load ×10 in a quarter'],['t','[2020] INFO  held it — scaled the platform'],['t','[2022] INFO  multi-region cluster'],['t','[2024] INFO  feature store for ML'],['ok','[2026] INFO  open to new projects ✓']];
+var i=0;
+var iv=setInterval(function(){
+if(i>=L.length){clearInterval(iv);add('dim','^C');inp.scrollIntoView({block:'nearest'});return}
+add(L[i][0],L[i][1]);i++;inp.scrollIntoView({block:'nearest'});
+},650);
+}
+function run(cmd,noscroll){
+cmd=cmd.trim();if(!cmd)return;
+H.push(cmd);hi=H.length;
+var d=document.createElement('div');d.className='ln';
+d.innerHTML='<span class="pr">omiagkov@prod:~$</span> <span class="in"></span>';
+d.querySelector('.in').textContent=cmd;
+hist.appendChild(d);
+if(cmd==='clear'){hist.innerHTML='';return}
+if(cmd==='cat stack.txt'||cmd==='stack'){
+add('ok','the stack is an iceberg: only BI is above the surface');
+addIce();
+}else if(cmd==='cv'||cmd==='resume'){
+add('ok','resume — terminal edition, full version in pdf:');
+clone('cvt');
+}else if(cmd==='contact'){
+addContact();
+}else if(cmd==='ls'){
+addLs();
+}else if(cmd==='ls projects/'||cmd==='ls projects'){
+addProjects();
+}else if(cmd==='history'){
+H.forEach(function(h,i){add('t',('   '+(i+1)).slice(-4)+'  '+h)});
+}else if(cmd==='neofetch'){
+addNeofetch();
+}else if(cmd==='sl'){
+addSl();
+}else if(cmd==='fortune'){
+add('ok',FORT[Math.floor(Math.random()*FORT.length)]);
+}else if(cmd==='tail -f career.log'||cmd==='tail -f'||cmd==='tail'){
+addTail();
+}else if(cmd==='date'){
+add('t',new Date().toLocaleString('en-US',{day:'numeric',month:'long',year:'numeric',hour:'2-digit',minute:'2-digit'}));
+add('dim','your local time — the engineer is most likely in a daily standup right now');
+}else{
+var out=C[cmd];
+if(out){out.forEach(function(l){add(l[0],l[1])})}
+else if(cmd.indexOf('echo ')===0){add('t',cmd.slice(5))}
+else if(cmd==='echo'){add('t',' ')}
+else if(cmd.toLowerCase().indexOf('select')===0){add('ok','1 row returned — see cv · query time: 0.042s')}
+else if(cmd.indexOf('kill')===0){add('err','kill: engineer\'s processes are unkillable — nohup since 2018')}
+else if(cmd.indexOf('chmod')===0){add('err','chmod: too permissive — the security team has been notified ;)')}
+else{
+var pk=cmd.indexOf('cat ')===0?projKey(cmd.slice(4).trim()):projKey(cmd);
+if(pk){C['cat projects/'+pk].forEach(function(l){add(l[0],l[1])})}
+else{add('err','bash: '+cmd+': command not found');add('dim','try: help')}
+}
+}
+if(!noscroll)inp.scrollIntoView({block:'nearest'});
+}
+function complete(){
+var v=inp.value;
+if(!v)return;
+var m=CANDS.filter(function(c){return c.indexOf(v)===0});
+if(!m.length)return;
+if(m.length===1){inp.value=m[0];return}
+var p=m[0];
+m.forEach(function(c){while(c.indexOf(p)!==0)p=p.slice(0,-1)});
+if(p.length>v.length){inp.value=p}
+else{add('dim',m.join('   '));inp.scrollIntoView({block:'nearest'})}
+}
+var SUG=null,ghA=document.getElementById('ghA'),ghB=document.getElementById('ghB');
+function ghost(){
+var v=inp.value;SUG=null;
+ghA.textContent='';ghB.textContent='';
+if(!v)return;
+for(var i=0;i<CANDS.length;i++){
+if(CANDS[i].indexOf(v)===0&&CANDS[i]!==v){SUG=CANDS[i];break}
+}
+if(SUG){ghA.textContent=v;ghB.textContent=SUG.slice(v.length)}
+}
+inp.addEventListener('input',ghost);
+inp.addEventListener('keydown',function(e){
+if(e.key==='Enter'){run(inp.value);inp.value='';ghost()}
+else if(e.key==='Tab'){e.preventDefault();if(SUG){inp.value=SUG;ghost()}else complete()}
+else if(e.key==='ArrowRight'&&SUG&&inp.selectionStart===inp.value.length){e.preventDefault();inp.value=SUG;ghost()}
+else if(e.key==='ArrowUp'){if(H.length&&hi>0){hi--;inp.value=H[hi]}e.preventDefault();ghost()}
+else if(e.key==='ArrowDown'){if(hi<H.length){hi++;inp.value=hi===H.length?'':H[hi]}e.preventDefault();ghost()}
+});
+document.querySelectorAll('.qc').forEach(function(c){c.addEventListener('click',function(){run(c.textContent)})});
+document.body.addEventListener('click',function(){if(!window.getSelection().toString()&&!('ontouchstart' in window))inp.focus()});
+var yr=document.getElementById('yr');
+if(yr)yr.textContent=new Date().getFullYear();
+if(!('ontouchstart' in window))inp.focus();
+})();
+</script>
+</body>
+</html>
