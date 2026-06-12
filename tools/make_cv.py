@@ -63,15 +63,16 @@ text(M, 778, "$ tech lead data engineer — high-load data platforms · fintech"
 
 parts = [
     ("mrobenner@gmail.com", "mailto:mrobenner@gmail.com"),
+    ("www.oom.fyi", "https://www.oom.fyi"),
     ("linkedin.com/in/omiagkov", "https://www.linkedin.com/in/omiagkov"),
     ("github.com/obenner", "https://github.com/obenner"),
     ("russia · remote-friendly", None),
 ]
-SEP = "   ·   "
-c.setFont("Helvetica", 9)
+SEP = "  ·  "
+c.setFont("Helvetica", 8.5)
 x = M
 for i, (s, url) in enumerate(parts):
-    w = c.stringWidth(s, "Helvetica", 9)
+    w = c.stringWidth(s, "Helvetica", 8.5)
     c.setFillColor(LINK if url else GRAY)
     c.drawString(x, 762, s)
     if url:
@@ -80,7 +81,7 @@ for i, (s, url) in enumerate(parts):
     if i < len(parts) - 1:
         c.setFillColor(GRAY)
         c.drawString(x, 762, SEP)
-        x += c.stringWidth(SEP, "Helvetica", 9)
+        x += c.stringWidth(SEP, "Helvetica", 8.5)
 
 c.setStrokeColor(GREEN)
 c.setLineWidth(2)
